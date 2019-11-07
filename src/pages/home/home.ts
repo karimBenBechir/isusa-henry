@@ -33,9 +33,10 @@ export class HomePage {
     //  console.log('this.',);
       this.eventSource=[];
       var evs=[];
+      var values = [];
       for(var i=0;i<this.items.length;i++)
       {
-      var values=Object.values(this.items[i]);
+      values=Object.values(this.items[i]);
       console.log("values",values," i = ",i);
       for(var j=0;j<values.length-1;j++)
       {
@@ -72,10 +73,8 @@ export class HomePage {
     modal.onDidDismiss(data => {
       if (data) {
         let eventData = data;
- 
         eventData.startTime = new Date(data.startTime);
         eventData.endTime = new Date(data.endTime);
- 
         let events = this.eventSource;
         events.push(eventData);
         this.eventSource = [];

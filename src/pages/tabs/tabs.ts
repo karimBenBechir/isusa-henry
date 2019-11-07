@@ -1,3 +1,4 @@
+import { ThemePage } from './../theme/theme';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {HomePage} from '../home/home';
@@ -17,6 +18,7 @@ import {ElevesPage} from '../eleves/eleves'
 export class TabsPage {
   HomePage=HomePage;
   ElevesPage=ElevesPage;
+  ThemePage=ThemePage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
